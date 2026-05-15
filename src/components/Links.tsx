@@ -5,6 +5,7 @@ const links = [
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
   { name: "Product", href: "/product" },
+  { name: "User", href: "/user" },
 ];
 
 const Links = () => {
