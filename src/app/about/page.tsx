@@ -1,9 +1,16 @@
-import React from "react";
+   "use client"
 
+import React from "react";
+import { useRouter } from "next/navigation";
 const AboutPage = () => {
+  const route=useRouter();
+
+  const chngepage=()=>{
+     route.push('/')
+  }
   return (
     <div className="min-h-screen bg-linear-to-br from-indigo-900 via-purple-900 to-indigo-700 flex items-center justify-center px-6">
-      
+   
       <div className="max-w-4xl w-full bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl p-10 text-white">
         
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center">
@@ -19,7 +26,7 @@ const AboutPage = () => {
         <div className="grid md:grid-cols-2 gap-6">
           
           <div className="bg-white/10 p-6 rounded-xl border border-white/10 hover:scale-105 transition">
-            <h2 className="text-xl font-semibold mb-2">🚀 My Mission</h2>
+            <h2 className="text-xl font-semibold mb-2"> My Mission</h2>
             <p className="text-gray-200 text-sm">
               To create impactful digital solutions that solve real-world
               problems and improve user experience through clean design and
@@ -57,9 +64,13 @@ const AboutPage = () => {
           <button className="bg-white text-indigo-900 font-semibold px-6 py-3 rounded-full hover:bg-gray-200 transition">
             Contact Me
           </button>
+            <button onClick={chngepage} className="bg-white mx-4 text-indigo-900 font-semibold px-6 py-3 rounded-full hover:bg-gray-200 transition">Go to home page</button>
         </div>
 
+        
       </div>
+    
+      
     </div>
   );
 };

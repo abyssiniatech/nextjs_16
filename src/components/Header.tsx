@@ -15,6 +15,7 @@ export default function Header() {
         {/* Navigation */}
         <nav className="hidden md:block">
           <Links />
+   
         </nav>
 
         {/* Mobile placeholder (optional later) */}
@@ -22,6 +23,7 @@ export default function Header() {
           Menu
         </div>
       </div>
+      
     </header>
   );
 }
