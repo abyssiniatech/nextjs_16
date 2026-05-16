@@ -1,5 +1,7 @@
+   "use client"
 import React from "react";
-
+import { usePathname } from "next/navigation"
+import Link from "next/link"
 const products = [
   {
     id: 1,
@@ -36,6 +38,7 @@ const products = [
 ];
 
 const ProductPage = () => {
+  const pathname=usePathname()
   return (
     <div className="min-h-screen bg-linear-to-br from-indigo-900 via-purple-900 to-indigo-700 px-6 py-16">
       
@@ -80,7 +83,41 @@ const ProductPage = () => {
           </div>
         ))}
       </div>
+          <div className="flex gap-4 text-white px-4 mt-4">
 
+      <Link
+        className={pathname === "/" ? "text-red-500" : ""}
+        href="/"
+      >
+        Home
+      </Link>
+
+      <Link
+        className={pathname === "/about" ? "text-red-500" : ""}
+        href="/about"
+      >
+        About
+      </Link>
+       <Link
+        className={pathname === "/contact" ? "text-red-500" : ""}
+        href="/contact"
+      >
+        contact
+      </Link>
+       <Link
+        className={pathname === "/product" ? "text-red-500" : ""}
+        href="/product"
+      >
+        About
+      </Link>
+       <Link
+        className={pathname === "/user" ? "text-red-500" : ""}
+        href="/user"
+      >
+        user
+      </Link>
+
+    </div>
     </div>
   );
 };

@@ -1,6 +1,12 @@
+   "use client"
 import React from "react";
-
+import { useRouter } from "next/navigation";
 const AboutPage = () => {
+  const route=useRouter();
+
+  const chngepage=()=>{
+     route.push('/')
+  }
   return (
     <div className="min-h-screen bg-linear-to-br from-indigo-900 via-purple-900 to-indigo-700 flex items-center justify-center px-6">
       
@@ -57,9 +63,13 @@ const AboutPage = () => {
           <button className="bg-white text-indigo-900 font-semibold px-6 py-3 rounded-full hover:bg-gray-200 transition">
             Contact Me
           </button>
+            <button onClick={chngepage} className="bg-white mx-4 text-indigo-900 font-semibold px-6 py-3 rounded-full hover:bg-gray-200 transition">Go to home page</button>
         </div>
 
+        
       </div>
+    
+      
     </div>
   );
 };
