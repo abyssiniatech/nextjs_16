@@ -1,3 +1,6 @@
+ import styles from "./user.module.css"
+
+
 const UserPage = () => {
   return (
     <div className="min-h-screen bg-indigo-800 text-white flex items-center justify-center px-4">
@@ -30,6 +33,9 @@ const UserPage = () => {
 
         <button className="mt-6 w-full bg-white text-indigo-800 font-semibold py-2 rounded-xl hover:bg-indigo-100 transition">
           Edit Profile
+        </button>
+        <button className={styles.button}>
+          Add
         </button>
       </div>
     </div>
