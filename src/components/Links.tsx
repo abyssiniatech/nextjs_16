@@ -6,6 +6,7 @@ const links = [
   { name: "Contact", href: "/contact" },
   { name: "Product", href: "/product" },
   { name: "User", href: "/user" },
+  { name: "Basic", href: "basic" },
 ];
 
 const Links = () => {
